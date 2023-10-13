@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.App, main{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+body{
+  background-color:  hsl(226, 43%, 10%);
+
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+/* PERSON */
+header{
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+
+  margin-block: 3rem 2rem;
+  margin-inline: 1.5rem;
+  max-width: 325px;
+
+}
+.header__person{
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+}
+.header__person img{
+  max-width: 75px;
+  height: auto;
+  max-height: 75px;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.header__person p{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  padding: 1rem;
+  font-size: 1rem;
+  color: hsl(235, 45%, 61%);
+}
+.header__person span{
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-inline-start: .25rem;
+  color: hsl(236, 65%, 91%);
+}
+/* REPORT TYPE */
+.header__type{
+  background-color: hsl(235, 46%, 20%);
+  color: hsl(235, 45%, 61%);
+  padding: 2rem;
+  border-radius: 15px;
+
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.radio:checked ~ label {
+  color: hsl(236, 65%, 91%);
+}
+.radio{
+  display: none;
+}
+/* CARDS */
+main{
+  margin-inline: 1.5rem;
+}
+.card{
+  background-color: hsl(235, 46%, 20%);
+  margin-block: 1rem;
+  border-radius: 15px;
+  padding: 0;
+  width: 325px;
+}
+.banner{
+  height: 45px;
+  border-radius: 15px;
+  z-index: 1;
+}
+.card__work{
+  background-color: hsl(15, 100%, 70%);
+}
+.card__play{
+  background-color: hsl(195, 74%, 62%);
+}
+.card__study{
+  background-color: hsl(348, 100%, 68%);
+}
+.card__exercise{
+  background-color: hsl(145, 58%, 55%);
+}
+.card__social{
+  background-color: hsl(264, 64%, 52%);
+}
+.card__self-care{
+  background-color: hsl(43, 84%, 65%);
+}
+
+.card img{
+  max-width: 75px;
+  height: auto;
+  position: relative;
+  left: 240px;
+  z-index: 1;
+}
+.card-info{
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 14px;
+
+}
+.card-info h2{
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-block-start: .75rem;
+}
+.timeframe{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-block: 1rem;
+}
+.current-timeframe{
+  color: hsl(236, 65%, 91%);
+  font-size: 2rem;
+  font-weight: 300;
+}
+.previous-timeframe{
+  color: hsl(235, 45%, 61%);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1024px){
+  body{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .App{
+    margin: 3rem 2rem;
+    flex-flow: row wrap;
+  }
+  header{
+    margin: .5rem;
+    max-width: 250px;
+    height: 490px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .header__person{
+    height: 300px;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .header__person p{
+    padding-inline: 0;
+    margin-block-start: 1rem ;
+  }
+  .header__person span{
+    font-size: 2.25rem;
+  }
+  .header__type{
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-block: auto;
+    
+  }
+  .header__type div{
+    margin-block-end: .5rem;
+  }
+  main{
+    max-width: 800px;
+    margin: 0;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    margin-inline: .5rem;
+    max-width: 250px;
+  }
+  .banner img{
+    left: 175px
+  }
+  .timeframe{
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .current-timeframe{
+    font-size: 3rem;
+  }
+  .previous-timeframe{
+    margin-block-start: .5rem;
+  }
+ 
+}
